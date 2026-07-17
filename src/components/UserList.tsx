@@ -13,7 +13,7 @@ function UserList({ users }: UserListProps) {
   return (
     <div>
       {users.map((user, index) => (
-        <UserCard key={index} user={user} />
+        <UserCard key={index} entity={user} />
       ))}
     </div>
   )

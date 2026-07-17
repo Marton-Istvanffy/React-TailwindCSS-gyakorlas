@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #0b1f3a;
+  color: #ffffff;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: #bc4419;
+  color: #ffffff;
+}
