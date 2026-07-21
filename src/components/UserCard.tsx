@@ -27,7 +27,7 @@ function UserCard({ entity }: UserCardProps) {
             <p>Rassz: {(entity as User).race}</p>
             <p>Magasság: {(entity as User).height}</p>
             <p>Csillagjegy: {(entity as User).starSign}</p>
-            <p>Rasszista-e: {(entity as User).isRacist  ? 'Igen' : 'Nem'}</p>
+            <p>Felnőtt-e {(entity as User).isAdult  ? 'Igen' : 'Nem'}</p>
           </>
         )
 
@@ -62,7 +62,7 @@ function UserCard({ entity }: UserCardProps) {
     }
   })()
 
-  return <div className="entity-card">{content}</div>
+  return <div className="rounded-[20px] border border-white/20 bg-gradient-to-br from-[#f5a623] to-[#d96c00] p-4 text-[#fff8e1] shadow-[0_10px_30px_rgba(0,0,0,0.15)]">{content}</div>
 }
 
 export default UserCard

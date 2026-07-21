@@ -6,7 +6,7 @@ export interface User {
   race: string;
   height: number;
   starSign: string;
-  isRacist: boolean;
+  isAdult: boolean;
 }
 
 export interface Animal {

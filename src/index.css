@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+@import 'tailwindcss';
+
 
 :root {
   color-scheme: dark;
@@ -9,9 +9,11 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #0b1f3a;
+  background-color: #bc4419;
   color: #ffffff;
-  font-family: 'Georgia', 'Times New Roman', serif;
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 #root {
