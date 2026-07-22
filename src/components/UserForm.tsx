@@ -90,6 +90,10 @@ function UserForm({ onAddEntity }: UserFormProps) {
           alert(`${f.label} egész szám kell legyen`)
           return
         }
+        if(f.name === 'numberOfLegs' && ( n % 2 !== 0)){
+          alert('A lábak száma páros szám kell legyen.')
+        return
+        }
       }
     }
 
@@ -152,7 +156,7 @@ function UserForm({ onAddEntity }: UserFormProps) {
               <input
                 type={f.type === 'date' ? 'date' : f.type}
                 min={f.name === 'age' || f.name === 'price' ? '0' : f.name === 'height' ? '150' : undefined}
-                max={f.name === 'age' ? '120' : f.name === 'height' ? '220' : undefined}
+                max={f.name === 'age' ? '120' : f.name === 'height' ? '220' : f.name === 'numberOfLegs' ? '1306' : undefined}
                 value={typeof values[f.name] === 'boolean' ? undefined : (values[f.name] as string) ?? ''}
                 onChange={(e) => handleChange(f.name, e.target.value)}
                 className="rounded-[10px] border-2 border-[#7a2e00] bg-[#fff7e8] px-3 py-2 text-[#3f1b00] shadow-[inset_0_1px_3px_rgba(0,0,0,0.08)] focus:border-[#d62828] focus:outline-none focus:ring-0"
